@@ -1,9 +1,9 @@
-
-
+import { Title } from "./style";
+            
 export default function Home(){
     return(
         <div>
-            <p>Home</p>
+            <Title>Titulo</Title>
         </div>
     );
 }
