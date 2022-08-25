@@ -1,11 +1,12 @@
+import { Container } from "./style";
 
 
 const CreateProduct = () => {
 
     return(
-        <div>
-            
-        </div>
+        <Container>
+            Create Product
+        </Container>
     );
 
 }
