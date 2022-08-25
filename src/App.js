@@ -1,12 +1,12 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import Home from './pages/Home';
+import ListProduct from './pages/ListProduct';
 
 function App() {
   return (
     <div>
       <NavBar/>
-      <Home></Home>
+      <ListProduct/>
     </div>
   );
 }
