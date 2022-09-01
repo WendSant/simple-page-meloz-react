@@ -6,19 +6,20 @@ import Home from './pages/Home';
 import CreateProduct from './pages/CreateProduct';
 import { Container } from './style';
 import { useState } from 'react';
+import { PAGE_CREATE,PAGE_EDIT,PAGE_HOME,PAGE_LIST } from './support/constants'
 
 function App() {
 
-  const PAGE_HOME = 1;
-  const PAGE_CREATE= 2;
-  const PAGE_EDIT = 3;
-  const PAGE_LIST= 4;
 
   const [atualPage, setAtualPage] = useState(PAGE_HOME);
 
+  const handleNavigationClick = (pageNumber) => {
+    setAtualPage(pageNumber);
+ }
+
   return (
     <Container>
-      <NavBar/>
+      <NavBar handleNavigationClick = {handleNavigationClick} />
       {
         atualPage === PAGE_HOME && <Home />
       }

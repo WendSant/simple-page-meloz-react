@@ -1,12 +1,13 @@
 import { Container, NavButton } from "./style";
+import { PAGE_CREATE, PAGE_EDIT, PAGE_HOME, PAGE_LIST } from '../../support/constants'
+const NavBar = ({ handleNavigationClick }) => {
 
-const NavBar = () => {
     return (
         <Container>
-            <NavButton href="#">Home</NavButton>
-            <NavButton href="#">Lista de produtos</NavButton>
-            <NavButton href="#">Criar produto</NavButton>
-            <NavButton href="#">Editar produto</NavButton>
+            <NavButton onClick={() => { handleNavigationClick(PAGE_HOME) }} href="#">Home</NavButton>
+            <NavButton onClick={() => { handleNavigationClick(PAGE_LIST) }} href="#">Lista de produtos</NavButton>
+            <NavButton onClick={() => { handleNavigationClick(PAGE_CREATE) }} href="#">Criar produto</NavButton>
+            <NavButton onClick={() => { handleNavigationClick(PAGE_EDIT) }} href="#">Editar produto</NavButton>
         </Container>
     )
 }
